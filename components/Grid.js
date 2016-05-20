@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
   Text,
   View
 } from 'react-native';
@@ -20,13 +18,16 @@ const Grid = ({grid,
       const cell = grid.cells[cellIndex];
       if (cellIndex % squareSize === 0) {
         rowCells = [];
+        //onLayout={(event)=>{console.log(event['_targetInst']['_currentElement']['type']['viewConfig']['NativeProps']['width'])}}
         rows.push(<View style={styles.row} key={rows.length}>{rowCells}</View>);
       }
-      const cellContainerStyles = [styles.cellContainer]
-      if(rows.length === 1) cellContainerStyles.push(styles.noTopBorder);
-      if(rows.length === squareSize) cellContainerStyles.push(styles.noBottomBorder);
-      if(cellIndex % squareSize === 0) cellContainerStyles.push(styles.noLeftBorder);
-      if(cellIndex % squareSize === squareSize - 1) cellContainerStyles.push(styles.noRightBorder);
+      const cellContainerStyles = [styles.cellContainer];//, styles.noLeftBorder, styles.noTopBorder];
+      if (rows.length === 1) cellContainerStyles.push(styles.noTopBorder);
+      if (rows.length === squareSize) cellContainerStyles.push(styles.noBottomBorder);
+      if (cellIndex % squareSize === 0) cellContainerStyles.push(styles.noLeftBorder);
+      if (cellIndex % squareSize === squareSize - 1) cellContainerStyles.push(styles.noRightBorder);
+      // if (rows.length === squareSize) cellContainerStyles.push(styles.noBottomBorder);
+      // if (cellIndex % squareSize === squareSize - 1) cellContainerStyles.push(styles.noRightBorder);
       rowCells.push(
         <View style={cellContainerStyles} key={cellIndex}>
           <Text style={styles.cellContents} onPress={() => pressHandler(cellIndex) } >{cell}</Text>

@@ -16,13 +16,11 @@ import styles from './components/styles/root-styles.js';
 class SamTicTacToe extends Component {
   render() {
     return (
-      <View style={styles.container} onLayout={(event) => { 
-      console.log(event);
-      }}>
+      <View style={styles.container}>
         <Grid pressHandler={() => { } }
           grid={{
             size: 3,
-            cells: ['X', 'O', 'X', 'O', 'X', 'X', 'O', 'X', 'X'],
+            cells: ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X'],
             initialized: true
           }}
           />

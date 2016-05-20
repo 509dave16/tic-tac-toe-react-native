@@ -1,16 +1,19 @@
 import {blue_frost_light} from './colors.js';
 import { StyleSheet } from 'react-native';
+import { em } from './units.js';
 const gridStyles = StyleSheet.create({
     cellContents: {
         color: blue_frost_light,
-        fontSize: 64,
+        fontSize: em(4),
         fontWeight: "800",
         //textAlign: 'center',
     },
     cellContainer: {
-        paddingLeft: 16,
-        paddingRight: 16,
-        borderWidth: 4,
+        paddingLeft: em(1),
+        paddingRight: em(1),
+        // width: em(5),
+        // height: em(5),
+        borderWidth: em(0.25),
         borderStyle: 'solid',
         borderColor: blue_frost_light,
     },
@@ -18,7 +21,7 @@ const gridStyles = StyleSheet.create({
         borderLeftWidth: 0
     },
     noRightBorder: {
-      borderRightWidth: 0  
+        borderRightWidth: 0
     },
     noTopBorder: {
         borderTopWidth: 0
