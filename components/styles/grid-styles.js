@@ -4,16 +4,13 @@ import { em } from './units.js';
 const gridStyles = StyleSheet.create({
     cellContents: {
         color: blue_frost_light,
-        fontSize: em(4),
+        fontSize: em(3),
         fontWeight: "800",
-        //textAlign: 'center',
     },
     cellContainer: {
-        paddingLeft: em(1),
-        paddingRight: em(1),
-        // width: em(5),
-        // height: em(5),
-        borderWidth: em(0.25),
+        paddingHorizontal: em(0.75),
+        width: em(3.75),
+        borderWidth: em(0.15),
         borderStyle: 'solid',
         borderColor: blue_frost_light,
     },
