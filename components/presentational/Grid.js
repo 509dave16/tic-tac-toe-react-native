@@ -6,8 +6,10 @@ import {
 
 import styles from './styles/grid-styles';
 
-const Grid = ({grid,
-  pressHandler}) => {
+const Grid = ({
+  grid,
+  pressHandler
+}) => {
   const renderGrid = () => {
     const rows = [];
     const numOfCells = grid.cells.length;

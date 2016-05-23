@@ -10,6 +10,7 @@ const gridStyles = StyleSheet.create({
     cellContainer: {
         paddingHorizontal: em(0.75),
         width: em(3.75),
+        height: em(3.75),
         borderWidth: em(0.15),
         borderStyle: 'solid',
         borderColor: blue_frost_light,

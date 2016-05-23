@@ -6,8 +6,7 @@ const RoundButtonGroupStyles = StyleSheet.create({
 	list: {
 		flexDirection: 'row',
 		alignItems: 'center',
-		//marginBottom: em(0.25),
-		//borderRadius: em(1),
+		marginBottom: em(0.25),
 	},
 	selectedItem: {
 		backgroundColor: blue_navy,
