@@ -13,7 +13,5 @@ const unit = base_unit * ratio;
 
 // We add an em() shortcut function 
 export function em(value) {
-  const computedValue = unit * value;
-	console.log(computedValue);
-	return computedValue;
+  return unit * value;
 }

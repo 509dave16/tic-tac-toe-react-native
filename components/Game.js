@@ -12,17 +12,17 @@ import styles from './presentational/styles/root-styles.js';
 
 export default ({
   store,
-  present
+  actions
 }) => {
   return (
     <Provider store={store}>
 			<View style={styles.background}>
         <View style={styles.container}>
-					<GameType present={present} buttons={['Host Game', 'Join Game', 'Local Game']}/>
-					<JoinGameForm present={present}/>
+					<GameType actions={actions} buttons={['Host Game', 'Join Game', 'Local Game']}/>
+					<JoinGameForm actions={actions}/>
 					<StatusLabels />
-					<GameBoard present={present}/>
-					<GameButtons present={present}/>
+					<GameBoard actions={actions}/>
+					<GameButtons actions={actions}/>
 				</View>
 			</View>
     </Provider>
