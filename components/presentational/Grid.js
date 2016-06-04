@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import {
   Text,
-  View
+  View,
+  TouchableHighlight,
+  TouchableOpacity
 } from 'react-native';
 
 import styles from './styles/grid-styles';
@@ -31,9 +33,11 @@ const Grid = ({
       // if (rows.length === squareSize) cellContainerStyles.push(styles.noBottomBorder);
       // if (cellIndex % squareSize === squareSize - 1) cellContainerStyles.push(styles.noRightBorder);
       rowCells.push(
-        <View style={cellContainerStyles} key={cellIndex}>
-          <Text style={styles.cellContents} onPress={() => pressHandler(cellIndex) } >{cell}</Text>
-        </View>);
+        <TouchableOpacity activeOpacity={1} onPress={() => pressHandler(cellIndex) }>
+          <View style={cellContainerStyles} key={cellIndex}>
+            <Text style={styles.cellContents} >{cell}</Text>
+          </View>
+        </TouchableOpacity>);
     }
 
     return rows;
