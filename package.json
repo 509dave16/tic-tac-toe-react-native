@@ -9,6 +9,6 @@
     "react": "15.0.2",
     "react-native": "^0.26.0",
     "react-redux": "^4.4.5",
-    "tic-tac-toe-engine": "0.3.0"
+    "tic-tac-toe-engine": "0.3.2"
   }
 }
